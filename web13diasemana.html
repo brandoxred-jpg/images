@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calcularDia(){
+            //recuperamos caja de dia
+            let cajaDia = parseInt(document.getElementById("cajadia");(value)
+            //recuperamos caja de mes
+            let cajaMes = parseInt(document.getElementById("cajames");(value)
+            //recuperamos caja de año
+            let cajaAnyo = parseInt(document.getElementById("cajaanyo");(value)
+           //Hacemos el calculo dependio del mes
+           
+            //1. Multiplicar el Mes más 1 por 3 y dividirlo entre 5
+            let op1 = (cajaMes.value + 1) * 3 / 5;
+            //2. Dividir el año entre 4
+            let op2 =cajaAnyo.value / 4;
+            //3. Dividir el año entre 100
+            let op3 = cajaAnyo.value / 100;
+            //4. Dividir el año entre 400
+            let op4 = cajaAnyo.value / 400;
+            //5.Sumar el dia, el doble del mes, el año, el resultado de la operación 1, el resultado de la operación 2, menos el resultado de la operación 3 más la operación 4 más 2.
+            let op5 = cajaDia + (cajaMes.value ) * 2 + cajaAnyo + op1 + op2 - op3 + (op4 + 2)
+            //6. Dividir el resultado anterior entre 7.
+            let op6 = (op5 /7 ) 
+            //7. Restar el número del paso 5 con el número del paso 6 por 7.
+            let op5 - (op6 * 7) 
+
+                    
+
+
+
+
+
+
+
+
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Día de la semana</h1>
+    Día <input type="number" id="cajadia"/><br/>
+    Mes: <input type="number" id="cajames"/><br/>
+    Año: <input type="number" id="cajaanyo"/><br/>
+    <button onclick="calcularDia()">Calcular día semana</button>
+    <h3 id="mensaje"></h3>
+</body>
+</html>

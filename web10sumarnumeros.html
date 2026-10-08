@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sumarNumeros() {
+            const numero1 = document.getElementById("numero1");
+            const numero2 = document.getElementById("numero2");
+            const valor1 = Number(numero1.value);
+            const valor2 = Number(numero2.value);
+
+            const mensaje = document.getElementById("resultado");
+
+            if (numero1.value === "" || numero2.value === "" || Number.isNaN(valor1) || Number.isNaN(valor2)) {
+                mensaje.innerText = "Introduce dos números válidos.";
+                return;
+            }
+
+            const suma = valor1 + valor2;
+            mensaje.innerText = "El resultado de la suma es: " + suma;
+        }
+    </script>
+</head>
+<body>
+    <h1>Sumar números</h1>
+    Numero 1:
+    <input type="number" id="numero1">
+    <br>
+    Numero 2:
+    <input type="number" id="numero2">
+    <br>
+    <button onclick="sumarNumeros()">Sumar</button>
+    <h3 id="resultado"></h3>
+</body>
+</html>
